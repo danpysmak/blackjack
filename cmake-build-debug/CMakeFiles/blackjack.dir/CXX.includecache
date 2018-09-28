@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/dpysmak/CLionProjects/blackjack/src/main.cpp
+iostream
+-
+pile.h
+/Users/dpysmak/CLionProjects/blackjack/src/pile.h
+
+/Users/dpysmak/CLionProjects/blackjack/src/pile.cpp
+pile.h
+/Users/dpysmak/CLionProjects/blackjack/src/pile.h
+
+/Users/dpysmak/CLionProjects/blackjack/src/pile.h
+vector
+-
+string
+-
+
