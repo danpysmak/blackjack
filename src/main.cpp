@@ -1,8 +1,14 @@
 #include <iostream>
-#include "pile.h"
+#include "table.h"
+
+using namespace std;
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+
+    cout << "Welcome to Blackjack!" << endl << endl;
+
+    Table table;
+    table.play();
 
     return 0;
 }

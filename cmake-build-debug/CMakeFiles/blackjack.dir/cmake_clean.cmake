@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/blackjack.dir/src/main.cpp.o"
   "CMakeFiles/blackjack.dir/src/pile.cpp.o"
+  "CMakeFiles/blackjack.dir/src/table.cpp.o"
   "blackjack.pdb"
   "blackjack"
 )

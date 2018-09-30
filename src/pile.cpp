@@ -1,7 +1,9 @@
 #include "pile.h"
 
 
-Pile::Pile() : newPile(makePile()), playPile(shufflePile()), cut(65) { }
+Pile::Pile() : newPile(makePile()), cut(65) {
+    playPile = shufflePile();
+}
 
 vector<string> Pile::makeDeck() {
 

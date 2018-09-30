@@ -5,7 +5,7 @@ project(blackjack)
 
 set(CMAKE_CXX_STANDARD 14)
 
-set(SOURCE_FILES ./src/main.cpp ./src/pile.cpp)
+set(SOURCE_FILES ./src/main.cpp ./src/pile.cpp ./src/table.cpp)
 
 # include directories
 include_directories(./src)

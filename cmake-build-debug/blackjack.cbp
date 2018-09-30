@@ -93,6 +93,12 @@
 		<Unit filename="/Users/dpysmak/CLionProjects/blackjack/src/pile.h">
 			<Option target="blackjack"/>
 		</Unit>
+		<Unit filename="/Users/dpysmak/CLionProjects/blackjack/src/table.cpp">
+			<Option target="blackjack"/>
+		</Unit>
+		<Unit filename="/Users/dpysmak/CLionProjects/blackjack/src/table.h">
+			<Option target="blackjack"/>
+		</Unit>
 		<Unit filename="/Users/dpysmak/CLionProjects/blackjack/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

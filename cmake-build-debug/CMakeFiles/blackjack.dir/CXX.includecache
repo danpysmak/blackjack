@@ -9,8 +9,8 @@
 /Users/dpysmak/CLionProjects/blackjack/src/main.cpp
 iostream
 -
-pile.h
-/Users/dpysmak/CLionProjects/blackjack/src/pile.h
+table.h
+/Users/dpysmak/CLionProjects/blackjack/src/table.h
 
 /Users/dpysmak/CLionProjects/blackjack/src/pile.cpp
 pile.h
@@ -21,4 +21,22 @@ vector
 -
 string
 -
+
+/Users/dpysmak/CLionProjects/blackjack/src/table.cpp
+table.h
+/Users/dpysmak/CLionProjects/blackjack/src/table.h
+iostream
+-
+zconf.h
+-
+
+/Users/dpysmak/CLionProjects/blackjack/src/table.h
+vector
+-
+string
+-
+unordered_set
+-
+pile.h
+/Users/dpysmak/CLionProjects/blackjack/src/pile.h
 

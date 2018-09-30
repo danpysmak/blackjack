@@ -177,6 +177,33 @@ src/pile.cpp.s:
 	$(MAKE) -f CMakeFiles/blackjack.dir/build.make CMakeFiles/blackjack.dir/src/pile.cpp.s
 .PHONY : src/pile.cpp.s
 
+src/table.o: src/table.cpp.o
+
+.PHONY : src/table.o
+
+# target to build an object file
+src/table.cpp.o:
+	$(MAKE) -f CMakeFiles/blackjack.dir/build.make CMakeFiles/blackjack.dir/src/table.cpp.o
+.PHONY : src/table.cpp.o
+
+src/table.i: src/table.cpp.i
+
+.PHONY : src/table.i
+
+# target to preprocess a source file
+src/table.cpp.i:
+	$(MAKE) -f CMakeFiles/blackjack.dir/build.make CMakeFiles/blackjack.dir/src/table.cpp.i
+.PHONY : src/table.cpp.i
+
+src/table.s: src/table.cpp.s
+
+.PHONY : src/table.s
+
+# target to generate assembly for a file
+src/table.cpp.s:
+	$(MAKE) -f CMakeFiles/blackjack.dir/build.make CMakeFiles/blackjack.dir/src/table.cpp.s
+.PHONY : src/table.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -192,6 +219,9 @@ help:
 	@echo "... src/pile.o"
 	@echo "... src/pile.i"
 	@echo "... src/pile.s"
+	@echo "... src/table.o"
+	@echo "... src/table.i"
+	@echo "... src/table.s"
 .PHONY : help
 
 

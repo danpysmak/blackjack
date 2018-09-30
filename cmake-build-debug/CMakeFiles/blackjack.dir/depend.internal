@@ -4,6 +4,11 @@
 CMakeFiles/blackjack.dir/src/main.cpp.o
  /Users/dpysmak/CLionProjects/blackjack/src/main.cpp
  /Users/dpysmak/CLionProjects/blackjack/src/pile.h
+ /Users/dpysmak/CLionProjects/blackjack/src/table.h
 CMakeFiles/blackjack.dir/src/pile.cpp.o
  /Users/dpysmak/CLionProjects/blackjack/src/pile.cpp
  /Users/dpysmak/CLionProjects/blackjack/src/pile.h
+CMakeFiles/blackjack.dir/src/table.cpp.o
+ /Users/dpysmak/CLionProjects/blackjack/src/pile.h
+ /Users/dpysmak/CLionProjects/blackjack/src/table.cpp
+ /Users/dpysmak/CLionProjects/blackjack/src/table.h
