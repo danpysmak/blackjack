@@ -1,4 +1,5 @@
 #include "pile.h"
+#include <iostream>
 
 
 Pile::Pile() : newPile(makePile()), cut(65) {
@@ -52,6 +53,7 @@ string Pile::deal() {
 
     if (playPile.size() <= cut) {
         shufflePile();
+        cout << "Shuffling the pile ..." << endl;
     }
 
     string card = playPile[playPile.size()-1];
