@@ -2,7 +2,7 @@
 #include <iostream>
 #include <zconf.h>
 
-Table::Table() : pile(Pile()) {}
+Table::Table() : pile(Pile()), limits(2,500) {}
 
 void Table::play() {
 
@@ -54,31 +54,51 @@ void Table::setBank() {
     cout << "Please enter how much cash you want to bring to the table:" << endl << "$";
     int playersBank;
     cin >> playersBank;
-    bank = playersBank;
 
+    while (playersBank < 2) {
+        cout << "Minimum bet is $2, you cant play with less money." ;
+        cout << "Please enter how much cash you want to bring to the table:" << endl << "$";
+        cin >> playersBank;
+    }
+
+    bank = playersBank;
 
 }
 
 void Table::placeBet() {
     int currBet;
-    cout << "Place your bet:" << endl << "$";
-    cin >> currBet;
+    while (true) {
+        cout << "Place your bet:" << endl << "$";
+        cin >> currBet;
+        if (currBet >= limits.first && currBet <= limits.second) {
+            break;
+        } else {
+          cout << "The bet you are trying to place is out of the limits. Limits for this game are $" << limits.first
+               << " to $" << limits.second << ". Try again." << endl;
+
+        }
+    }
+
     bank -= currBet;
     bet = currBet;
     cout << endl << endl;
 }
 
+
+
 int Table::countScore(vector<string> cards) {
 
     int score = 0;
-    unordered_set<string> tens = {"10", "J", "Q", "K", "A"};
+    unordered_set<string> tens = {"10", "J", "Q", "K"};
 
     for (string card : cards) {
-        string card2 = card.substr(0, card.size()-3);   // kind symbol string has a size of 3
-        if (tens.find(card2) != tens.end()) {
+        string value = card.substr(0, card.size()-3);   // kind symbol string has a size of 3
+        if (tens.find(value) != tens.end()) {
             score += 10;
+        } else if (value == "A") {
+            score += 11;
         } else {
-            score += stoi(card2);
+            score += stoi(value);
         }
     }
 
@@ -110,19 +130,7 @@ void Table::displayCards(int mode) {
 }
 
 
-bool Table::waitUser() {
-    cout << "Hit SPACE to draw, ENTER to stand" << endl;
 
-    while (true) {
-        string input;
-        cin >> input;
-        if (input == "s") {
-            return true;
-        } else if (input == "e") {
-            return false;
-        }
-    }
-}
 
 bool Table::playUser() {
     while (pscore <= 21) {
@@ -143,18 +151,35 @@ bool Table::playUser() {
         cout << "Dealer's turn." << endl;
         return true;
     }
+}
 
+bool Table::waitUser() {
+    cout << "Hit SPACE to draw, ENTER to stand" << endl;
+
+    while (true) {
+        string input;
+        cin >> input;
+        if (input == "s") {
+            return true;
+        } else if (input == "e") {
+            return false;
+        }
+    }
 }
 
 void Table::playDealer() {
     displayCards(1);
     while (dscore < 17) {
-        sleep(1);
+        sleep(2);
         dealerCards.push_back(pile.deal());
         dscore = countScore(dealerCards);
         displayCards(1);
     }
 }
+
+
+
+
 
 void Table::showResults() {
     if (dscore > 21) {

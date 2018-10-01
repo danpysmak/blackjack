@@ -15,6 +15,7 @@ public:
 private:
     int bet;
     int bank;
+    pair<int,int> limits;
     Pile pile;
     vector<string> dealerCards;
     int dscore;
