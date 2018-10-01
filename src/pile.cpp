@@ -29,7 +29,7 @@ vector<string> Pile::makePile() {
     vector<string> deck = makeDeck();
 
     vector<string> pile;
-    pile.reserve(364);
+    pile.reserve(312);
 
     for (int i = 0; i < 6; ++i) {
         for (string card : deck) {
