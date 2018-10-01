@@ -13,14 +13,20 @@ public:
 
 
 private:
+    Pile pile;
+    pair<int,int> limits;
+
     int bet;
     int bank;
-    pair<int,int> limits;
-    Pile pile;
+
     vector<string> dealerCards;
     int dscore;
     vector<string> playerCards;
     int pscore;
+
+
+    void setBank();
+    void placeBet();
 
     void playRound();
     void displayCards(int mode);
@@ -29,13 +35,11 @@ private:
 
     void playDealer();
     bool playUser();
-
-    void setBank();
-    void placeBet();
     bool waitUser();
 
 
-    int countScore(vector<string> cards);
 
+
+    int countScore(vector<string> cards);
 
 };

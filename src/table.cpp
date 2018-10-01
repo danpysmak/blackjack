@@ -50,6 +50,11 @@ void Table::playRound() {
 }
 
 
+
+
+
+
+
 void Table::setBank() {
     cout << "Please enter how much cash you want to bring to the table:" << endl << "$";
     int playersBank;

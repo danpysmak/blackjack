@@ -15,6 +15,8 @@ table.h
 /Users/dpysmak/CLionProjects/blackjack/src/pile.cpp
 pile.h
 /Users/dpysmak/CLionProjects/blackjack/src/pile.h
+iostream
+-
 
 /Users/dpysmak/CLionProjects/blackjack/src/pile.h
 vector
